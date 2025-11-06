@@ -1560,9 +1560,9 @@ input:checked ~ .toggle-text {
 
 .contect-info {
   position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 440px;
+  left: 80px;
+  transform: none;
   width: fit-content;
   /* background: yellow; */
 }
@@ -1615,14 +1615,18 @@ input:checked ~ .toggle-text {
 }
 
 .contect-title {
-  position: relative;
-  z-index: 3;
-  font-size: 48px;
-  font-weight: 700;
+  position: absolute;
+  top: 260px;
+  left: 80px;
+  z-index: 100;
+  font-size: 120px;
+  font-weight: 900;
   color: #fff;
+  opacity: 1 !important;
+  display: block !important;
+  pointer-events: auto;
   cursor: pointer;
   transition: all 0.1s ease;
-  opacity: 0;
 }
 
 .contect-title:hover {
@@ -1644,17 +1648,9 @@ input:checked ~ .toggle-text {
   z-index: 3;
 }
 
-.contect-section h2 {
-  top: 100px;
-  left: 100px;
-  color: #fff;
-  font-size: 200px;
-  font-weight: 800;
-}
-
 .contect-info {
   /* position: relative; */
-  left: 450px;
+  left: 96px;
   bottom: 500px;
   /* border: 1px solid #ffffff; */
 }
