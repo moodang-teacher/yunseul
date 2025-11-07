@@ -270,23 +270,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // Lenis는 상단에서 이미 초기화됨
 
   gsap.set(".image-motion", {
-    opacity: 0,
-    y: -100,
-    transform: "rotatex(90deg)",
+    transform: "scaleY(0)",
   });
 
   gsap.to(".image-motion", {
-    opacity: 1,
-    y: 0,
-    transform: "rotatex(0deg)",
-    duration: 1.2,
-    ease: "power2.out",
+    transform: "scaleY(1)",
     scrollTrigger: {
       trigger: ".section2",
-      start: "top 80%",
-      end: "top 30%",
-      scrub: true,
-      markers: true,
+      start: "top 100%",
+      end: "top 0%",
+      scrub: 2,
+      // markers: true,
     },
   });
 
@@ -433,7 +427,7 @@ document.addEventListener("DOMContentLoaded", () => {
       trigger: ".about-title .wrap",
       start: "top 80%",
       toggleActions: "play none none reverse",
-      markers: true,
+      // markers: true,
     },
   });
 
@@ -524,7 +518,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("Section4 entered back - restarting animation");
       createProjectAnimation();
     },
-    markers: true,
+    // markers: true,
   });
 
   gsap.registerPlugin(DrawSVGPlugin, ScrollTrigger);
@@ -635,7 +629,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("Section5 entered back - restarting animation");
       createEtcWorkAnimation();
     },
-    markers: true,
+    // markers: true,
   });
 
   // motion-path 애니메이션
@@ -1466,7 +1460,7 @@ document.addEventListener("DOMContentLoaded", () => {
         bannerSectionTitle.classList.remove("shrink");
       }
     },
-    markers: true,
+    // markers: true,
   });
 
   // ESC 키로 detail panel 닫기
